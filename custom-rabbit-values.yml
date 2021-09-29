@@ -1,0 +1,21 @@
+global:
+  storageClass: nfs
+
+image:
+  repository: arm64v8/rabbitmq
+  tag: 3.8
+
+ingress:
+  enabled: true
+  hostname: rmq.foo.goo
+  ingressClassName: nginx
+
+metrics:
+  enabled: true
+  serviceMonitor:
+    enabled: true
+    interval: 60s
+
+persistence:
+  storageClass: nfs
+  size: 8Gi
