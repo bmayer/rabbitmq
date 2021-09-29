@@ -81,6 +81,9 @@ kubectl exec -it rabbit-rabbitmq-0 -nrabbit -- sh
 > rabbitmqctl set_user_tags <user> administrator
 ```
 
+## UI
+- The `rabbit-rabbitmq` service for the UI is created as a LoadBalancer via port `15672`
+
 ## Notes
 Credentials:
 
